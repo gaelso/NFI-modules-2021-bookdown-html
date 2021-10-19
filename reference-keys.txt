@@ -6,13 +6,6 @@ results-of-a-small-scale-forest-inventory
 land-cover-and-areas
 sampling
 calculate-the-number-of-random-samples
-you-need-to-choose-your-main-nfi-objective-and-the-key-variable-to-measure
-you-need-an-indicative-variability-for-your-key-variable-of-interest
-systematic-sampling-design
-the-4-km-grid
-the-3-km-grid
-the-2-km-grid
-recap
 random-sampling
 uneven-systematic-sampling
 plot-designs

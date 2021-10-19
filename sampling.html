@@ -169,11 +169,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#calculate-the-number-of-random-samples"><i class="fa fa-check"></i><b>2.1</b> Calculate the number of random samples</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="sampling.html"><a href="sampling.html#you-need-to-choose-your-main-nfi-objective-and-the-key-variable-to-measure"><i class="fa fa-check"></i><b>2.1.1</b> You need to choose your main NFI objective and the key variable to measure</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sampling.html"><a href="sampling.html#you-need-an-indicative-variability-for-your-key-variable-of-interest"><i class="fa fa-check"></i><b>2.1.2</b> You need an indicative variability for your key variable of interest</a></li>
-<li class="chapter" data-level="2.1.3" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i><b>2.1.3</b> Systematic sampling design</a></li>
-<li class="chapter" data-level="2.1.4" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.1.4</b> Random Sampling</a></li>
-<li class="chapter" data-level="2.1.5" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.1.5</b> Uneven Systematic Sampling</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#choose-your-main-nfi-objective-and-the-key-variable-to-measure"><i class="fa fa-check"></i>Choose your main NFI objective and the key variable to measure</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#indicative-variability-for-your-key-variable-of-interest"><i class="fa fa-check"></i>Indicative variability for your key variable of interest</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i>Systematic sampling design</a></li>
+<li class="chapter" data-level="2.1.1" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.1.1</b> Random Sampling</a></li>
+<li class="chapter" data-level="2.1.2" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.1.2</b> Uneven Systematic Sampling</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#plot-designs"><i class="fa fa-check"></i><b>2.2</b> Plot designs</a></li>
 </ul></li>
@@ -223,14 +223,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">2</span> Create a Sampling and Plot Design</h1>
 <div id="calculate-the-number-of-random-samples" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Calculate the number of random samples</h2>
-<div id="you-need-to-choose-your-main-nfi-objective-and-the-key-variable-to-measure" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> You need to choose your main NFI objective and the key variable to measure</h3>
+<div id="choose-your-main-nfi-objective-and-the-key-variable-to-measure" class="section level3 unnumbered">
+<h3>Choose your main NFI objective and the key variable to measure</h3>
 <p>In this interactive module the main variable of interest is the forest <txt-green>mean aboveground biomass</txt-green>.</p>
 <p>In this version we will limit ourselves to random and systematic samples, but with post stratification we will also get an aboveground biomass estimates for each forest type.</p>
 <p><strong>ADD Note on next version, stratified sampling, biodiversity as main variable of interest</strong></p>
 </div>
-<div id="you-need-an-indicative-variability-for-your-key-variable-of-interest" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> You need an indicative variability for your key variable of interest</h3>
+<div id="indicative-variability-for-your-key-variable-of-interest" class="section level3 unnumbered">
+<h3>Indicative variability for your key variable of interest</h3>
 <p>Remember in the NFI module lesson 3, the formula to estimate the <strong>sampling size <code>n</code></strong> is:</p>
 <p><span class="math display">\[n = \left(\frac{CV \cdot t^{1 - \alpha/2}_n}{A}\right)^2 = \left(\frac{CV \cdot 1.96}{A}\right)^2\]</span>
 with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variable coefficient of variation (i.e. average <span class="math inline">\(\mu\)</span> divided by standard deviation <span class="math inline">\(\sigma\)</span>) and <span class="math inline">\(A\)</span> the desired precision.</p>
@@ -239,38 +239,44 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="sampling.html#cb13-1" aria-hidden="true" tabindex="-1"></a>n05 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb13-2"><a href="sampling.html#cb13-2" aria-hidden="true" tabindex="-1"></a>n05</span></code></pre></div>
 <pre class="Rout"><code>[1] 3967.777</code></pre>
+<p> </p>
 <p><strong>Your turn, calculate n10, n15 and n20, the number of samples necessary to get respectively 10%, 15% and 20% precision on <code>Louland</code>’s mean aboveground biomass.</strong></p>
 <p><strong>Calculations for 10% here:</strong></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="sampling.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
 <span id="cb15-2"><a href="sampling.html#cb15-2" aria-hidden="true" tabindex="-1"></a>n10 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.1</span>)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb15-3"><a href="sampling.html#cb15-3" aria-hidden="true" tabindex="-1"></a>n10</span></code></pre></div>
 <pre class="Rout"><code>[1] 991.9442</code></pre>
+<p> </p>
 <p><strong>Calculations for 15% here:</strong></p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="sampling.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
 <span id="cb17-2"><a href="sampling.html#cb17-2" aria-hidden="true" tabindex="-1"></a>n15 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.15</span>)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb17-3"><a href="sampling.html#cb17-3" aria-hidden="true" tabindex="-1"></a>n15</span></code></pre></div>
 <pre class="Rout"><code>[1] 440.8641</code></pre>
+<p> </p>
 <p><strong>Calculations for 10% here:</strong></p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="sampling.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
 <span id="cb19-2"><a href="sampling.html#cb19-2" aria-hidden="true" tabindex="-1"></a>n20 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.2</span>)<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb19-3"><a href="sampling.html#cb19-3" aria-hidden="true" tabindex="-1"></a>n20</span></code></pre></div>
 <pre class="Rout"><code>[1] 247.986</code></pre>
-<p>We have enough budget for 600 plots. What is the best range of precision we can afford?</p>
+<div class="question">
 <p><strong>Multiple choices</strong></p>
+<p>We have enough budget for around 600 plots. What is the best range of precision we can afford?</p>
 <ol style="list-style-type: decimal">
 <li>5% - 10%</li>
 <li><strong>10% - 15%</strong></li>
 <li>15% - 20%</li>
 </ol>
 </div>
-<div id="systematic-sampling-design" class="section level3" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Systematic sampling design</h3>
+<p> </p>
+</div>
+<div id="systematic-sampling-design" class="section level3 unnumbered">
+<h3>Systematic sampling design</h3>
 <p>Now let’s see what grid spacing this would lead to.</p>
 <p>To get the exact number of samples (at least according to our preliminary data, some forest plot may very well be non forest on the ground), we will start from a <em>systematic sampling design</em>. This way we can account for the additional constraint on grid spacing, and afterwards we will make a simple random sampling that matches the same number of plots.</p>
 <p>The <code>sf</code> package contains the function <code>st_make_grid()</code> to create random and grid points within an existing polygon. Let’s start with <code>n15</code>.</p>
 <p>The new land fits more or less in a 90 km square, meaning that if we were to place a sampling plot at the center of each square of a 1 km grid we would have 90 * 90 = <code>8100</code> sampling plots. Similarly a 4 km grid would give us approximately (90 / 4)^2 = <code>506.25</code> plots.</p>
-<div id="the-4-km-grid" class="section level4" number="2.1.3.1">
-<h4><span class="header-section-number">2.1.3.1</span> The 4 km grid</h4>
+<div id="the-4-km-grid" class="section level4 unnumbered">
+<h4>The 4 km grid</h4>
 <p>That’s a good start. Let’s make the grid. We have the <code>sf_boundary</code> shapefile that contains the administrative boundary of <code>Louland</code>. Also we will offset the grid 1 km South and 1 km West of the land most southern and Western point to avoid have too many plots at the edge of the land.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="sampling.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Might as well be hidden</span></span>
 <span id="cb21-2"><a href="sampling.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -327,8 +333,8 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <p>While we can definitely afford this sampling size, we can try to intensify a bit to increase our precision. In our very first approximation we didn’t account for the fact that a ggod proportion of the land is non-forest.</p>
 <p><strong>You turn! Prepare <code>sf_pointx</code>, <code>sf_plotx</code>, <code>nplotx</code> and <code>nplotx_total</code> with <code>x</code> taking the values 3 and 2 for creating respectively a 3 and 2 km grids.</strong></p>
 </div>
-<div id="the-3-km-grid" class="section level4" number="2.1.3.2">
-<h4><span class="header-section-number">2.1.3.2</span> The 3 km grid</h4>
+<div id="the-3-km-grid" class="section level4 unnumbered">
+<h4>The 3 km grid</h4>
 <p>Create directly:</p>
 <ul>
 <li>Points with the option <code>what = "center"</code>.</li>
@@ -392,8 +398,8 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 1   551</code></pre>
 <p>Good job! The 3 km grid looks like exactly what we need. Let’s still design a 2 km grid to see if we could afford it.</p>
 </div>
-<div id="the-2-km-grid" class="section level4" number="2.1.3.3">
-<h4><span class="header-section-number">2.1.3.3</span> The 2 km grid</h4>
+<div id="the-2-km-grid" class="section level4 unnumbered">
+<h4>The 2 km grid</h4>
 <p>Create directly:</p>
 <ul>
 <li>Points with the option <code>what = "center"</code>.</li>
@@ -455,11 +461,14 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
       n
   &lt;int&gt;
 1  1250</code></pre>
+<p> </p>
+<div class="question">
 <p><strong>ADD exercise: what grid to select</strong></p>
-<p>Good job! The 2 km grid is outside our budget constraint so we will go the the 3 km grid!</p>
 </div>
-<div id="recap" class="section level4" number="2.1.3.4">
-<h4><span class="header-section-number">2.1.3.4</span> Recap</h4>
+<p>Good job! The 2 km grid is outside our budget constraint so we will continue with the 3 km grid!</p>
+</div>
+<div id="recap" class="section level4 unnumbered">
+<h4>Recap</h4>
 <p>Based on the preliminary inventory and few R skills, we have now identified a good sampling grid. To recap the process was:</p>
 <ol style="list-style-type: decimal">
 <li>We used the <strong>preliminary forest inventory</strong> results to calculate a an hypothetical number of samples required for a desired precision of 5, 10, 15 or 20%.</li>
@@ -470,22 +479,24 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <p><txt-green> Now let’s see what the same amount of sampling points would give us with a random sampling or with an uneven systematic sampling.</txt-green></p>
 </div>
 </div>
-<div id="random-sampling" class="section level3" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Random Sampling</h3>
+<div id="random-sampling" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Random Sampling</h3>
 <p><strong>TBD</strong></p>
 </div>
-<div id="uneven-systematic-sampling" class="section level3" number="2.1.5">
-<h3><span class="header-section-number">2.1.5</span> Uneven Systematic Sampling</h3>
+<div id="uneven-systematic-sampling" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Uneven Systematic Sampling</h3>
 <p><strong>TBD</strong></p>
 </div>
 </div>
 <div id="plot-designs" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Plot designs</h2>
-<p>In this version of the interactive module, the plot design is limited to one choice:
-- circular plot of 20 m radius for all trees with a diameter at breast height bigger than orr equal to 20 cm,
-- nested circular plot of 5 m radius for trees with a diameter at breast height bigger than or equal to 10 cm and smaller than 20 cm.</p>
+<p>In this version of the interactive module, the plot design is limited to one choice:</p>
+<ul>
+<li>circular plot of 20 m radius for all trees with a diameter at breast height bigger than orr equal to 20 cm,</li>
+<li>nested circular plot of 5 m radius for trees with a diameter at breast height bigger than or equal to 10 cm and smaller than 20 cm.</li>
+</ul>
 <p>Let’s see for example all the trees measured in one plot: <code>"ev-ywt8"</code>.</p>
-<p><img src="Handbook_files/figure-html/unnamed-chunk-34-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="Handbook_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /></p>
 
 <div style="page-break-after: always;"></div>
 </div>
