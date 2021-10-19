@@ -15,9 +15,9 @@ h1, h2, h3 {
   font-size: 1.6rem;
 }
 
-code, pre, samp, {
+code, pre, samp, sourceCode {
   font-family: 'Space Mono', monospace;
-  font-size: 1.6em;
+  /*font-size: 1.6em;*/
 }
 
 .author, .date {

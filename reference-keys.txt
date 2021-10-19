@@ -1,9 +1,7 @@
 fig:data-cleaning
 newland
-first-view
+first-look
 preliminary-information
-results-of-a-small-scale-forest-inventory
-land-cover-and-areas
 sampling
 calculate-the-number-of-random-samples
 random-sampling

@@ -158,11 +158,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1" data-path="newland.html"><a href="newland.html"><i class="fa fa-check"></i><b>1</b> A new land has emerged</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="newland.html"><a href="newland.html#first-view"><i class="fa fa-check"></i><b>1.1</b> First view</a></li>
+<li class="chapter" data-level="1.1" data-path="newland.html"><a href="newland.html#first-look"><i class="fa fa-check"></i><b>1.1</b> First look</a></li>
 <li class="chapter" data-level="1.2" data-path="newland.html"><a href="newland.html#preliminary-information"><i class="fa fa-check"></i><b>1.2</b> Preliminary information</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="newland.html"><a href="newland.html#results-of-a-small-scale-forest-inventory"><i class="fa fa-check"></i><b>1.2.1</b> Results of a small scale forest inventory</a></li>
-<li class="chapter" data-level="1.2.2" data-path="newland.html"><a href="newland.html#land-cover-and-areas"><i class="fa fa-check"></i><b>1.2.2</b> land cover and areas</a></li>
+<li class="chapter" data-level="" data-path="newland.html"><a href="newland.html#results-of-a-small-scale-forest-inventory"><i class="fa fa-check"></i>Results of a small scale forest inventory</a></li>
+<li class="chapter" data-level="" data-path="newland.html"><a href="newland.html#land-cover-types-and-areas"><i class="fa fa-check"></i>land cover types and areas</a></li>
+<li class="chapter" data-level="" data-path="newland.html"><a href="newland.html#bonus"><i class="fa fa-check"></i>Bonus</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Create a Sampling and Plot Design</a>
@@ -236,28 +237,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variable coefficient of variation (i.e. average <span class="math inline">\(\mu\)</span> divided by standard deviation <span class="math inline">\(\sigma\)</span>) and <span class="math inline">\(A\)</span> the desired precision.</p>
 <p>Thanks to <code>fi_agb</code>, we have <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> for ``Louland’s NFI. The desired precision depends on both the precision you expect for the NFI and your budget constraints. In case of a systematic sampling we can add an additional constraint that we want the NFI grid to be a round km value.</p>
 <p>Let’s first calculate the number of sample for different precision levels. For a 5% precision, the number of sample is:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="sampling.html#cb13-1" aria-hidden="true" tabindex="-1"></a>n05 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb13-2"><a href="sampling.html#cb13-2" aria-hidden="true" tabindex="-1"></a>n05</span></code></pre></div>
-<pre class="Rout"><code>[1] 3967.777</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="sampling.html#cb15-1" aria-hidden="true" tabindex="-1"></a>n05 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb15-2"><a href="sampling.html#cb15-2" aria-hidden="true" tabindex="-1"></a>n05</span></code></pre></div>
+<pre class="Rout"><code>[1] 1707.872</code></pre>
 <p> </p>
 <p><strong>Your turn, calculate n10, n15 and n20, the number of samples necessary to get respectively 10%, 15% and 20% precision on <code>Louland</code>’s mean aboveground biomass.</strong></p>
 <p><strong>Calculations for 10% here:</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="sampling.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb15-2"><a href="sampling.html#cb15-2" aria-hidden="true" tabindex="-1"></a>n10 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.1</span>)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb15-3"><a href="sampling.html#cb15-3" aria-hidden="true" tabindex="-1"></a>n10</span></code></pre></div>
-<pre class="Rout"><code>[1] 991.9442</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="sampling.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb17-2"><a href="sampling.html#cb17-2" aria-hidden="true" tabindex="-1"></a>n10 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.1</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb17-3"><a href="sampling.html#cb17-3" aria-hidden="true" tabindex="-1"></a>n10</span></code></pre></div>
+<pre class="Rout"><code>[1] 426.968</code></pre>
 <p> </p>
 <p><strong>Calculations for 15% here:</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="sampling.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb17-2"><a href="sampling.html#cb17-2" aria-hidden="true" tabindex="-1"></a>n15 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.15</span>)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb17-3"><a href="sampling.html#cb17-3" aria-hidden="true" tabindex="-1"></a>n15</span></code></pre></div>
-<pre class="Rout"><code>[1] 440.8641</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="sampling.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb19-2"><a href="sampling.html#cb19-2" aria-hidden="true" tabindex="-1"></a>n15 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.15</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb19-3"><a href="sampling.html#cb19-3" aria-hidden="true" tabindex="-1"></a>n15</span></code></pre></div>
+<pre class="Rout"><code>[1] 189.7635</code></pre>
 <p> </p>
 <p><strong>Calculations for 10% here:</strong></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="sampling.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb19-2"><a href="sampling.html#cb19-2" aria-hidden="true" tabindex="-1"></a>n20 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.2</span>)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb19-3"><a href="sampling.html#cb19-3" aria-hidden="true" tabindex="-1"></a>n20</span></code></pre></div>
-<pre class="Rout"><code>[1] 247.986</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="sampling.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb21-2"><a href="sampling.html#cb21-2" aria-hidden="true" tabindex="-1"></a>n20 <span class="ot">&lt;-</span> ((fi_agb<span class="sc">$</span>mean_agb <span class="sc">/</span> fi_agb<span class="sc">$</span>sd_agb) <span class="sc">*</span> <span class="fl">1.96</span> <span class="sc">/</span> <span class="fl">0.2</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb21-3"><a href="sampling.html#cb21-3" aria-hidden="true" tabindex="-1"></a>n20</span></code></pre></div>
+<pre class="Rout"><code>[1] 106.742</code></pre>
 <div class="question">
 <p><strong>Multiple choices</strong></p>
 <p>We have enough budget for around 600 plots. What is the best range of precision we can afford?</p>
@@ -277,41 +278,41 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <p>The new land fits more or less in a 90 km square, meaning that if we were to place a sampling plot at the center of each square of a 1 km grid we would have 90 * 90 = <code>8100</code> sampling plots. Similarly a 4 km grid would give us approximately (90 / 4)^2 = <code>506.25</code> plots.</p>
 <div id="the-4-km-grid" class="section level4 unnumbered">
 <h4>The 4 km grid</h4>
-<p>That’s a good start. Let’s make the grid. We have the <code>sf_boundary</code> shapefile that contains the administrative boundary of <code>Louland</code>. Also we will offset the grid 1 km South and 1 km West of the land most southern and Western point to avoid have too many plots at the edge of the land.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="sampling.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Might as well be hidden</span></span>
-<span id="cb21-2"><a href="sampling.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="sampling.html#cb21-3" aria-hidden="true" tabindex="-1"></a>offset <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(sf_newland)[<span class="fu">c</span>(<span class="st">&quot;xmin&quot;</span>, <span class="st">&quot;ymin&quot;</span>)] <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1000</span>, <span class="sc">-</span><span class="dv">1000</span>)</span></code></pre></div>
+<p>That’s a good start. Let’s make the grid. We have the <code>sf_admin</code> shapefile that contains the administrative boundary of <code>Louland</code>. Also we will offset the grid 1 km South and 1 km West of the land most southern and Western point to avoid have too many plots at the edge of the land.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="sampling.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Might as well be hidden</span></span>
+<span id="cb23-2"><a href="sampling.html#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="sampling.html#cb23-3" aria-hidden="true" tabindex="-1"></a>offset <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(sf_lc)[<span class="fu">c</span>(<span class="st">&quot;xmin&quot;</span>, <span class="st">&quot;ymin&quot;</span>)] <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1000</span>, <span class="sc">-</span><span class="dv">1000</span>)</span></code></pre></div>
 <p>We make the grid with the option <code>what = "polygon"</code>…</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="sampling.html#cb22-1" aria-hidden="true" tabindex="-1"></a>sf_grid4 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_newland, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4000</span>), <span class="at">what =</span> <span class="st">&quot;polygons&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
-<span id="cb22-2"><a href="sampling.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_boundary)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sampling.html#cb24-1" aria-hidden="true" tabindex="-1"></a>sf_grid4 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_lc, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4000</span>), <span class="at">what =</span> <span class="st">&quot;polygons&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="sampling.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_admin)</span></code></pre></div>
 <p>… And the points with the option <code>what = "center"</code> (replace <code>"center"</code> with <code>"corner"</code> to have the point at the grid intersections).</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="sampling.html#cb23-1" aria-hidden="true" tabindex="-1"></a>sf_points4 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_newland, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
-<span id="cb23-2"><a href="sampling.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_boundary) <span class="sc">%&gt;%</span></span>
-<span id="cb23-3"><a href="sampling.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="sampling.html#cb25-1" aria-hidden="true" tabindex="-1"></a>sf_points4 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_lc, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">4000</span>, <span class="dv">4000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="sampling.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_admin) <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="sampling.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
 <p>We can extract the land cover information at each plot location with <code>st_intersection()</code>…</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="sampling.html#cb24-1" aria-hidden="true" tabindex="-1"></a>sf_plot4 <span class="ot">&lt;-</span> sf_points4 <span class="sc">%&gt;%</span></span>
-<span id="cb24-2"><a href="sampling.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_newland) <span class="sc">%&gt;%</span></span>
-<span id="cb24-3"><a href="sampling.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc_f =</span> <span class="fu">fct_reorder</span>(lc, id_lc)) <span class="sc">%&gt;%</span></span>
-<span id="cb24-4"><a href="sampling.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc_f))</span></code></pre></div>
-<p>… And visualize the grid with the following code (we have a custom color palette <code>newland_palette</code> for <code>Louland</code> land covers).</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="sampling.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb25-2"><a href="sampling.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_newland, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb25-3"><a href="sampling.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot4, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb25-4"><a href="sampling.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_grid4, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb25-5"><a href="sampling.html#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_boundary, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb25-6"><a href="sampling.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> newland_palette) <span class="sc">+</span></span>
-<span id="cb25-7"><a href="sampling.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
-<span id="cb25-8"><a href="sampling.html#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="sampling.html#cb26-1" aria-hidden="true" tabindex="-1"></a>sf_plot4 <span class="ot">&lt;-</span> sf_points4 <span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a href="sampling.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_lc) <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="sampling.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc =</span> <span class="fu">fct_reorder</span>(lc, lc_id)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="sampling.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc))</span></code></pre></div>
+<p>… And visualize the grid with the following code (we have a custom color palette <code>pal</code> for <code>Louland</code> land covers).</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="sampling.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb27-2"><a href="sampling.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_lc, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="sampling.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot4, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="sampling.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_grid4, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="sampling.html#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_admin, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="sampling.html#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> pal) <span class="sc">+</span></span>
+<span id="cb27-7"><a href="sampling.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-8"><a href="sampling.html#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
 <p><img src="Handbook_files/figure-html/ggplot4-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p> </p>
 <p>Looking good! To calculate the number of plot in each forest type and the total we can use <code>group_by()</code> and <code>summarise()</code> again.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="sampling.html#cb26-1" aria-hidden="true" tabindex="-1"></a>nplot4 <span class="ot">&lt;-</span> sf_plot4 <span class="sc">%&gt;%</span></span>
-<span id="cb26-2"><a href="sampling.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb26-3"><a href="sampling.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc_f) <span class="sc">%&gt;%</span></span>
-<span id="cb26-4"><a href="sampling.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
-<span id="cb26-5"><a href="sampling.html#cb26-5" aria-hidden="true" tabindex="-1"></a>nplot4 </span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="sampling.html#cb28-1" aria-hidden="true" tabindex="-1"></a>nplot4 <span class="ot">&lt;-</span> sf_plot4 <span class="sc">%&gt;%</span></span>
+<span id="cb28-2"><a href="sampling.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="sampling.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc) <span class="sc">%&gt;%</span></span>
+<span id="cb28-4"><a href="sampling.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
+<span id="cb28-5"><a href="sampling.html#cb28-5" aria-hidden="true" tabindex="-1"></a>nplot4 </span></code></pre></div>
 <pre class="Rout"><code># A tibble: 7 x 2
-  lc_f      n
+  lc        n
   &lt;fct&gt; &lt;int&gt;
 1 WA        3
 2 NF      102
@@ -321,10 +322,10 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 6 EV       54
 7 MG        5</code></pre>
 <p>We then need to remove non-forest categories with <code>filter()</code> and sum the remaining number of plots.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="sampling.html#cb28-1" aria-hidden="true" tabindex="-1"></a>nplot4_total <span class="ot">&lt;-</span> nplot4 <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="sampling.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc_f <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb28-3"><a href="sampling.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
-<span id="cb28-4"><a href="sampling.html#cb28-4" aria-hidden="true" tabindex="-1"></a>nplot4_total</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="sampling.html#cb30-1" aria-hidden="true" tabindex="-1"></a>nplot4_total <span class="ot">&lt;-</span> nplot4 <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="sampling.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb30-3"><a href="sampling.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb30-4"><a href="sampling.html#cb30-4" aria-hidden="true" tabindex="-1"></a>nplot4_total</span></code></pre></div>
 <pre class="Rout"><code># A tibble: 1 x 1
       n
   &lt;int&gt;
@@ -339,63 +340,63 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <ul>
 <li>Points with the option <code>what = "center"</code>.</li>
 </ul>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="sampling.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb30-2"><a href="sampling.html#cb30-2" aria-hidden="true" tabindex="-1"></a>sf_points3 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_newland, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">3000</span>, <span class="dv">3000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
-<span id="cb30-3"><a href="sampling.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_boundary) <span class="sc">%&gt;%</span></span>
-<span id="cb30-4"><a href="sampling.html#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="sampling.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb32-2"><a href="sampling.html#cb32-2" aria-hidden="true" tabindex="-1"></a>sf_points3 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_lc, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">3000</span>, <span class="dv">3000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="sampling.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_admin) <span class="sc">%&gt;%</span></span>
+<span id="cb32-4"><a href="sampling.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
 <p> </p>
 <ul>
 <li>Plots by joining the land cover shapefile <code>sf_newland</code>.</li>
 </ul>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="sampling.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb31-2"><a href="sampling.html#cb31-2" aria-hidden="true" tabindex="-1"></a>sf_plot3 <span class="ot">&lt;-</span> sf_points3 <span class="sc">%&gt;%</span></span>
-<span id="cb31-3"><a href="sampling.html#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_newland) <span class="sc">%&gt;%</span></span>
-<span id="cb31-4"><a href="sampling.html#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc_f =</span> <span class="fu">fct_reorder</span>(lc, id_lc)) <span class="sc">%&gt;%</span></span>
-<span id="cb31-5"><a href="sampling.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc_f))</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="sampling.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb33-2"><a href="sampling.html#cb33-2" aria-hidden="true" tabindex="-1"></a>sf_plot3 <span class="ot">&lt;-</span> sf_points3 <span class="sc">%&gt;%</span></span>
+<span id="cb33-3"><a href="sampling.html#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_lc) <span class="sc">%&gt;%</span></span>
+<span id="cb33-4"><a href="sampling.html#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc =</span> <span class="fu">fct_reorder</span>(lc, lc_id)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-5"><a href="sampling.html#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc))</span></code></pre></div>
 <p> </p>
 <ul>
 <li>A map with the plots over the land cover (remember we have a custom color palette <code>newland_palette</code> for <code>Louland</code> land covers).</li>
 </ul>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="sampling.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb32-2"><a href="sampling.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb32-3"><a href="sampling.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_newland, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb32-4"><a href="sampling.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot3, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb32-5"><a href="sampling.html#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> newland_palette) <span class="sc">+</span></span>
-<span id="cb32-6"><a href="sampling.html#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-7"><a href="sampling.html#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="sampling.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb34-2"><a href="sampling.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb34-3"><a href="sampling.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_lc, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb34-4"><a href="sampling.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot3, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="sampling.html#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> pal) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="sampling.html#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb34-7"><a href="sampling.html#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
 <p><img src="Handbook_files/figure-html/ggplot3-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p> </p>
 <ul>
 <li>Calculations of the number of plots per land cover class.</li>
 </ul>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="sampling.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb33-2"><a href="sampling.html#cb33-2" aria-hidden="true" tabindex="-1"></a>nplot3 <span class="ot">&lt;-</span> sf_plot3 <span class="sc">%&gt;%</span></span>
-<span id="cb33-3"><a href="sampling.html#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb33-4"><a href="sampling.html#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc_f) <span class="sc">%&gt;%</span></span>
-<span id="cb33-5"><a href="sampling.html#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
-<span id="cb33-6"><a href="sampling.html#cb33-6" aria-hidden="true" tabindex="-1"></a>nplot3 </span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="sampling.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb35-2"><a href="sampling.html#cb35-2" aria-hidden="true" tabindex="-1"></a>nplot3 <span class="ot">&lt;-</span> sf_plot3 <span class="sc">%&gt;%</span></span>
+<span id="cb35-3"><a href="sampling.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb35-4"><a href="sampling.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc) <span class="sc">%&gt;%</span></span>
+<span id="cb35-5"><a href="sampling.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
+<span id="cb35-6"><a href="sampling.html#cb35-6" aria-hidden="true" tabindex="-1"></a>nplot3 </span></code></pre></div>
 <pre class="Rout"><code># A tibble: 7 x 2
-  lc_f      n
+  lc        n
   &lt;fct&gt; &lt;int&gt;
 1 WA        6
 2 NF      179
-3 PL      164
-4 DD       76
-5 MD      200
+3 PL      166
+4 DD       77
+5 MD      199
 6 EV      106
 7 MG        5</code></pre>
 <ul>
 <li>And the total number of plot in forests.</li>
 </ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="sampling.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
-<span id="cb35-2"><a href="sampling.html#cb35-2" aria-hidden="true" tabindex="-1"></a>nplot3_total <span class="ot">&lt;-</span> nplot3 <span class="sc">%&gt;%</span></span>
-<span id="cb35-3"><a href="sampling.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc_f <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb35-4"><a href="sampling.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
-<span id="cb35-5"><a href="sampling.html#cb35-5" aria-hidden="true" tabindex="-1"></a>nplot3_total</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="sampling.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Guided</span></span>
+<span id="cb37-2"><a href="sampling.html#cb37-2" aria-hidden="true" tabindex="-1"></a>nplot3_total <span class="ot">&lt;-</span> nplot3 <span class="sc">%&gt;%</span></span>
+<span id="cb37-3"><a href="sampling.html#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4"><a href="sampling.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb37-5"><a href="sampling.html#cb37-5" aria-hidden="true" tabindex="-1"></a>nplot3_total</span></code></pre></div>
 <pre class="Rout"><code># A tibble: 1 x 1
       n
   &lt;int&gt;
-1   551</code></pre>
+1   553</code></pre>
 <p>Good job! The 3 km grid looks like exactly what we need. Let’s still design a 2 km grid to see if we could afford it.</p>
 </div>
 <div id="the-2-km-grid" class="section level4 unnumbered">
@@ -404,63 +405,63 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <ul>
 <li>Points with the option <code>what = "center"</code>.</li>
 </ul>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="sampling.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb37-2"><a href="sampling.html#cb37-2" aria-hidden="true" tabindex="-1"></a>sf_points2 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_newland, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
-<span id="cb37-3"><a href="sampling.html#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_boundary) <span class="sc">%&gt;%</span></span>
-<span id="cb37-4"><a href="sampling.html#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="sampling.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb39-2"><a href="sampling.html#cb39-2" aria-hidden="true" tabindex="-1"></a>sf_points2 <span class="ot">&lt;-</span> <span class="fu">st_make_grid</span>(sf_lc, <span class="at">cellsize =</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2000</span>), <span class="at">what =</span> <span class="st">&quot;centers&quot;</span>, <span class="at">offset =</span> offset) <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="sampling.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_intersection</span>(sf_admin) <span class="sc">%&gt;%</span></span>
+<span id="cb39-4"><a href="sampling.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span></code></pre></div>
 <p> </p>
 <ul>
 <li>Plots by joining the land cover shapefile <code>sf_newland</code>.</li>
 </ul>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="sampling.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb38-2"><a href="sampling.html#cb38-2" aria-hidden="true" tabindex="-1"></a>sf_plot2 <span class="ot">&lt;-</span> sf_points2 <span class="sc">%&gt;%</span></span>
-<span id="cb38-3"><a href="sampling.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_newland) <span class="sc">%&gt;%</span></span>
-<span id="cb38-4"><a href="sampling.html#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc_f =</span> <span class="fu">fct_reorder</span>(lc, id_lc)) <span class="sc">%&gt;%</span></span>
-<span id="cb38-5"><a href="sampling.html#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc_f))</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="sampling.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb40-2"><a href="sampling.html#cb40-2" aria-hidden="true" tabindex="-1"></a>sf_plot2 <span class="ot">&lt;-</span> sf_points2 <span class="sc">%&gt;%</span></span>
+<span id="cb40-3"><a href="sampling.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_join</span>(sf_lc) <span class="sc">%&gt;%</span></span>
+<span id="cb40-4"><a href="sampling.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">lc =</span> <span class="fu">fct_reorder</span>(lc, lc_id)) <span class="sc">%&gt;%</span></span>
+<span id="cb40-5"><a href="sampling.html#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lc))</span></code></pre></div>
 <p> </p>
 <ul>
 <li>A map with the plots over the land cover (remember we have a custom color palette <code>newland_palette</code> for <code>Louland</code> land covers).</li>
 </ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="sampling.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb39-2"><a href="sampling.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb39-3"><a href="sampling.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_newland, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb39-4"><a href="sampling.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot2, <span class="fu">aes</span>(<span class="at">fill =</span> lc_f), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb39-5"><a href="sampling.html#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> newland_palette) <span class="sc">+</span></span>
-<span id="cb39-6"><a href="sampling.html#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
-<span id="cb39-7"><a href="sampling.html#cb39-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="sampling.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb41-2"><a href="sampling.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb41-3"><a href="sampling.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_lc, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb41-4"><a href="sampling.html#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_plot2, <span class="fu">aes</span>(<span class="at">fill =</span> lc), <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb41-5"><a href="sampling.html#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> pal) <span class="sc">+</span></span>
+<span id="cb41-6"><a href="sampling.html#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">&quot;&quot;</span>, <span class="at">color =</span> <span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a href="sampling.html#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div>
 <p><img src="Handbook_files/figure-html/ggplot2-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p> </p>
 <ul>
 <li>Calculations of the number of plots per land cover class.</li>
 </ul>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="sampling.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb40-2"><a href="sampling.html#cb40-2" aria-hidden="true" tabindex="-1"></a>nplot2 <span class="ot">&lt;-</span> sf_plot2 <span class="sc">%&gt;%</span></span>
-<span id="cb40-3"><a href="sampling.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb40-4"><a href="sampling.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc_f) <span class="sc">%&gt;%</span></span>
-<span id="cb40-5"><a href="sampling.html#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
-<span id="cb40-6"><a href="sampling.html#cb40-6" aria-hidden="true" tabindex="-1"></a>nplot2 </span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="sampling.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb42-2"><a href="sampling.html#cb42-2" aria-hidden="true" tabindex="-1"></a>nplot2 <span class="ot">&lt;-</span> sf_plot2 <span class="sc">%&gt;%</span></span>
+<span id="cb42-3"><a href="sampling.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb42-4"><a href="sampling.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(lc) <span class="sc">%&gt;%</span></span>
+<span id="cb42-5"><a href="sampling.html#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>())</span>
+<span id="cb42-6"><a href="sampling.html#cb42-6" aria-hidden="true" tabindex="-1"></a>nplot2 </span></code></pre></div>
 <pre class="Rout"><code># A tibble: 7 x 2
-  lc_f      n
+  lc        n
   &lt;fct&gt; &lt;int&gt;
 1 WA       10
 2 NF      390
-3 PL      378
-4 DD      165
+3 PL      375
+4 DD      166
 5 MD      462
 6 EV      215
 7 MG       30</code></pre>
 <ul>
 <li>And the total number of plot in forests.</li>
 </ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="sampling.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
-<span id="cb42-2"><a href="sampling.html#cb42-2" aria-hidden="true" tabindex="-1"></a>nplot2_total <span class="ot">&lt;-</span> nplot2 <span class="sc">%&gt;%</span></span>
-<span id="cb42-3"><a href="sampling.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc_f <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb42-4"><a href="sampling.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
-<span id="cb42-5"><a href="sampling.html#cb42-5" aria-hidden="true" tabindex="-1"></a>nplot2_total</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="sampling.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Empty console</span></span>
+<span id="cb44-2"><a href="sampling.html#cb44-2" aria-hidden="true" tabindex="-1"></a>nplot2_total <span class="ot">&lt;-</span> nplot2 <span class="sc">%&gt;%</span></span>
+<span id="cb44-3"><a href="sampling.html#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(lc <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;WA&quot;</span>, <span class="st">&quot;NF&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb44-4"><a href="sampling.html#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span>
+<span id="cb44-5"><a href="sampling.html#cb44-5" aria-hidden="true" tabindex="-1"></a>nplot2_total</span></code></pre></div>
 <pre class="Rout"><code># A tibble: 1 x 1
       n
   &lt;int&gt;
-1  1250</code></pre>
+1  1248</code></pre>
 <p> </p>
 <div class="question">
 <p><strong>ADD exercise: what grid to select</strong></p>
@@ -496,7 +497,7 @@ with <span class="math inline">\(CV = \mu / \sigma\)</span> the NFI main variabl
 <li>nested circular plot of 5 m radius for trees with a diameter at breast height bigger than or equal to 10 cm and smaller than 20 cm.</li>
 </ul>
 <p>Let’s see for example all the trees measured in one plot: <code>"ev-ywt8"</code>.</p>
-<p><img src="Handbook_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><img src="Handbook_files/figure-html/unnamed-chunk-1-1.png" width="80%" style="display: block; margin: auto;" /></p>
 
 <div style="page-break-after: always;"></div>
 </div>
