@@ -1,9 +1,10 @@
 fig:data-cleaning
+r-packages-list
 newland
 first-look
 preliminary-information
 sampling
-calculate-the-number-of-random-samples
+number-of-random-samples
 random-sampling
 uneven-systematic-sampling
 plot-designs

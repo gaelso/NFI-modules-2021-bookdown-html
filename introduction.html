@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Cover page</a></li>
 <li class="chapter" data-level="" data-path="foreword.html"><a href="foreword.html"><i class="fa fa-check"></i>Foreword</a>
 <ul>
-<li class="chapter" data-level="" data-path="foreword.html"><a href="foreword.html#versions-notes"><i class="fa fa-check"></i>Version’s notes</a></li>
+<li class="chapter" data-level="0.1" data-path="foreword.html"><a href="foreword.html#r-packages-list"><i class="fa fa-check"></i><b>0.1</b> R packages list</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
@@ -166,17 +166,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="newland.html"><a href="newland.html#bonus"><i class="fa fa-check"></i>Bonus</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Create a Sampling and Plot Design</a>
+<li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Sampling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#calculate-the-number-of-random-samples"><i class="fa fa-check"></i><b>2.1</b> Calculate the number of random samples</a>
+<li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#number-of-random-samples"><i class="fa fa-check"></i><b>2.1</b> Number of random samples</a>
 <ul>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#choose-your-main-nfi-objective-and-the-key-variable-to-measure"><i class="fa fa-check"></i>Choose your main NFI objective and the key variable to measure</a></li>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#indicative-variability-for-your-key-variable-of-interest"><i class="fa fa-check"></i>Indicative variability for your key variable of interest</a></li>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i>Systematic sampling design</a></li>
-<li class="chapter" data-level="2.1.1" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.1.1</b> Random Sampling</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.1.2</b> Uneven Systematic Sampling</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#nfi-main-variable"><i class="fa fa-check"></i>NFI main variable</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#indicative-variability"><i class="fa fa-check"></i>Indicative variability</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#plot-designs"><i class="fa fa-check"></i><b>2.2</b> Plot designs</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i>Systematic sampling design</a>
+<ul>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-4-km-grid"><i class="fa fa-check"></i>The 4 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-3-km-grid"><i class="fa fa-check"></i>The 3 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-2-km-grid"><i class="fa fa-check"></i>The 2 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#recap"><i class="fa fa-check"></i>Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.2</b> Random Sampling</a></li>
+<li class="chapter" data-level="2.3" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.3</b> Uneven Systematic Sampling</a></li>
+<li class="chapter" data-level="2.4" data-path="sampling.html"><a href="sampling.html#plot-designs"><i class="fa fa-check"></i><b>2.4</b> Plot designs</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="collect.html"><a href="collect.html"><i class="fa fa-check"></i><b>3</b> Data collection and processing</a>
 <ul>
@@ -227,7 +233,8 @@ DRAFT
 </div>
 <div id="context" class="section level2 unnumbered">
 <h2>Context</h2>
-<p><txt-green>Data analysis</txt-green> is a larger concept than National Forest Inventory estimation design. It is not limited to the calculation of variables of interest from field measurements. There are numerous deifnitons for data analysis, one of the earliest being: “Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data” (John Tukey, The Future of Data Analysis, 1961).</p>
+<p>The Food and Agriculture Organization of the United Nations (FAO), in partnership with Gottingen University have developed a series of training module on National Forest Inventory [LINK]. The overall objective is to complement FAO <a href="https://www.fao.org/policy-support/tools-and-publications/resources-details/en/c/1027734/">Voluntary Guidelines on National Forest Monitoring</a>, by providing forest practitioners with pragmatic information on NFI design and implementation. This interactive module is meant as a hands-on tool to apply several concepts presented in the training modules, with a focus on <strong>sampling design and data analysis</strong>.</p>
+<p><txt-green>Data analysis</txt-green> in a larger context encompasses most all of the different steps of NFI design and implementation. There are numerous definitions for data analysis, one of the earliest being: “Procedures for analyzing data, techniques for interpreting the results of such procedures, ways of planning the gathering of data to make its analysis easier, more precise or more accurate, and all the machinery and results of (mathematical) statistics which apply to analyzing data” (John Tukey, The Future of Data Analysis, 1961).</p>
 <p>Different fields touching on data analysis have different steps to encompass the workflow for analyzing data, but they can more or less be divided into:</p>
 <ol style="list-style-type: decimal">
 <li>Data requirements,</li>
@@ -239,12 +246,12 @@ DRAFT
 <li>Data product,</li>
 <li>Communication.</li>
 </ol>
-<p>In the context of the NFI modules [LINK], we have already seen most of these steps under different names. Data requirements include NFI <strong>sampling and plot designs</strong> (NFI Module 3), together with the <strong>strategy and objectives of the NFI</strong> (NFI Modules 1 and 2). Data collection is the <strong>field work</strong> part of NFI (NFI Module 4). Data processing is adressed in the <strong>data management</strong> (NFI Module 5). Data cleaning is maybe the most important part of the data analysis workflow. Several data cleaning tips are provided in <strong>QAQC</strong> (NFI module 6), although this module is also related to field work and data management.</p>
-<p>The data cleaning, exploratory data analysis, modeling and data products are at <txt-green>the heart of this interactive training module</txt-green> and are encompassed under the data analysis part of the NFI workflow, keeping in mind that some of these elements are touched upon in the NFI modules 1-6. The interactive module also starts with a short practice on NFI design, to help you have a good overall picture on how to start exploring with sampling.</p>
+<p>In the NFI training modules, we have already seen most of these steps under different names. Data requirements include NFI <strong>sampling and plot designs</strong> (NFI Module 3), together with the <strong>strategy and objectives of the NFI</strong> (NFI Modules 1 and 2). Data collection is the <strong>field work</strong> part of NFI (NFI Module 4). Data processing is adressed in the <strong>data management</strong> (NFI Module 5). Data cleaning is maybe the most important part of the data analysis workflow. Several data cleaning tips are provided in <strong>QAQC</strong> (NFI module 6), although this module is also related to field work and data management.</p>
+<p>The data cleaning, exploratory data analysis, modeling and data products are at <txt-green>the heart of this interactive training module</txt-green>. The interactive module also starts with a short practice on sampling design, to help you have a good overall picture on how to start exploring with sampling.</p>
 </div>
 <div id="an-interactive-module-to-practice-sampling-and-carbon-stock-calculations" class="section level2 unnumbered">
 <h2>An interactive module to practice sampling and carbon stock calculations</h2>
-<p>This interactive module is designed to complement the NFI training modules [LINK] with practical hands-on exercises on a fictional island that just emerged in the middle of the Atlantic [Pacific?] Ocean. Although this land is not an official country, we will use the acronym NFI when referring to its forest inventory as the method and formulas applied here are valid for nationwide forest inventories.</p>
+<p>This interactive module is designed to complement the NFI training modules [LINK] with practical hands-on exercises on a fictional island that just emerged in the middle of the Atlantic Ocean. Although this land is not an official country, we will use the acronym NFI when referring to its forest inventory as the method and formulas applied here are valid for nationwide forest inventories.</p>
 <p>To limit the scope of this training:</p>
 <ul>
 <li>This NFI main objective is to estimate <strong>the overall average aboveground forest carbon stock (tCO<sub>2</sub>/ha)</strong> of the island.</li>
@@ -253,7 +260,7 @@ DRAFT
 <p>What you will do is:</p>
 <ol style="list-style-type: decimal">
 <li>Estimate the number of plots necessary to have the desired precision on the target estimator,</li>
-<li>Create a sampling a plot design [Plot design optimization in V2.0],</li>
+<li>Create a sampling a plot design [plot design optimization in V2.0],</li>
 <li>Read and clean the field data,</li>
 <li>Add ancillary data (wood density, climatic factors, allometric equations) from external sources,</li>
 <li>Propagate tree biomass to plot, forest type and nationwide average with confidence interval.</li>

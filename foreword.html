@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Cover page</a></li>
 <li class="chapter" data-level="" data-path="foreword.html"><a href="foreword.html"><i class="fa fa-check"></i>Foreword</a>
 <ul>
-<li class="chapter" data-level="" data-path="foreword.html"><a href="foreword.html#versions-notes"><i class="fa fa-check"></i>Version’s notes</a></li>
+<li class="chapter" data-level="0.1" data-path="foreword.html"><a href="foreword.html#r-packages-list"><i class="fa fa-check"></i><b>0.1</b> R packages list</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
@@ -166,17 +166,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="newland.html"><a href="newland.html#bonus"><i class="fa fa-check"></i>Bonus</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Create a Sampling and Plot Design</a>
+<li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Sampling</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#calculate-the-number-of-random-samples"><i class="fa fa-check"></i><b>2.1</b> Calculate the number of random samples</a>
+<li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#number-of-random-samples"><i class="fa fa-check"></i><b>2.1</b> Number of random samples</a>
 <ul>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#choose-your-main-nfi-objective-and-the-key-variable-to-measure"><i class="fa fa-check"></i>Choose your main NFI objective and the key variable to measure</a></li>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#indicative-variability-for-your-key-variable-of-interest"><i class="fa fa-check"></i>Indicative variability for your key variable of interest</a></li>
-<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i>Systematic sampling design</a></li>
-<li class="chapter" data-level="2.1.1" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.1.1</b> Random Sampling</a></li>
-<li class="chapter" data-level="2.1.2" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.1.2</b> Uneven Systematic Sampling</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#nfi-main-variable"><i class="fa fa-check"></i>NFI main variable</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#indicative-variability"><i class="fa fa-check"></i>Indicative variability</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#plot-designs"><i class="fa fa-check"></i><b>2.2</b> Plot designs</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#systematic-sampling-design"><i class="fa fa-check"></i>Systematic sampling design</a>
+<ul>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-4-km-grid"><i class="fa fa-check"></i>The 4 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-3-km-grid"><i class="fa fa-check"></i>The 3 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#the-2-km-grid"><i class="fa fa-check"></i>The 2 km grid</a></li>
+<li class="chapter" data-level="" data-path="sampling.html"><a href="sampling.html#recap"><i class="fa fa-check"></i>Recap</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#random-sampling"><i class="fa fa-check"></i><b>2.2</b> Random Sampling</a></li>
+<li class="chapter" data-level="2.3" data-path="sampling.html"><a href="sampling.html#uneven-systematic-sampling"><i class="fa fa-check"></i><b>2.3</b> Uneven Systematic Sampling</a></li>
+<li class="chapter" data-level="2.4" data-path="sampling.html"><a href="sampling.html#plot-designs"><i class="fa fa-check"></i><b>2.4</b> Plot designs</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="collect.html"><a href="collect.html"><i class="fa fa-check"></i><b>3</b> Data collection and processing</a>
 <ul>
@@ -225,12 +231,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="watermark">
 DRAFT
 </div>
-<p><strong>Welcome</strong> to the interactive training module on NFI data analysis with R.</p>
-<p>This interactive module has been developed with the R programming and statistical language and Rstudio IDE. It has been made possible with a great number of additioncal packages developed by the R ommunity, most importantly <code>knitr</code>, <code>rmarkdown</code>, <code>bookdown</code>, <code>shiny</code> and <code>learnr</code>. They are amazing packages for integrating R code and formatted text together in documents and webpages that you will hopefully find good looking and functional!</p>
+<p><txt-green>Welcome to the interactive training module on National Forest Inventory data analysis with R.</txt-green></p>
+<p>This interactive module has been developed with the R programming and statistical language and Rstudio IDE. It has been made possible with a great number of additional packages developed by the R community, most importantly <code>knitr</code>, <code>rmarkdown</code>, <code>bookdown</code>, <code>shiny</code> and <code>learnr</code>. They are amazing packages for integrating R code and formatted text together in documents and webpages that you will hopefully find good looking and functional!</p>
 <p>The data analysis itself can be carried out with a number of applications, but R has been chosen because it’s free, opensource, has a large and active community of users that can help each others. It has solutions for all the steps required to take data from a forest inventory field campaign and derive statistics.</p>
-<p>If you don’t have any experience of programming languages, we strongly recommend you to go through a general basic introduction to R before you complete this module. The formulas and concepts presented here were taken from the NFI training modules [LINK] and can be applied outside of the exercises in this interactive module. For an introduction to R. there are plenty of resources freely available on the internet but if you don’t know where to start, and since a good amount of our code is based on the <a href="https://www.tidyverse.org/">tidyverse</a> collection of R packages, you could try <a href="https://r4ds.had.co.nz/">R for Data Science</a>. The book introduction will guide you through installing R, R studio, key packages and the main functions that you will find here for data wrangling.</p>
-<div id="versions-notes" class="section level2 unnumbered">
-<h2>Version’s notes</h2>
+<p>The formulas and concepts applied here were taken from the NFI training modules [LINK] and this interactive module is meant to complete the theoretical NFI training modules with some practice on sampling design and deriving inference for different population variables of interest.</p>
+<div class="infobox">
+<p>If you don’t have any experience of programming languages and of R in particular, we strongly recommend you to go through a general basic introduction to R before you complete this module. For an introduction to R there are plenty of resources freely available on the internet but if you don’t know where to start, and since a good amount of our code is based on the <a href="https://www.tidyverse.org/">tidyverse</a> collection of R packages, you could try <a href="https://r4ds.had.co.nz/">R for Data Science</a>. The book introduction will guide you through installing R, R studio, key packages and the main functions that you use here for data wrangling.</p>
+<p>A fair amount of code is related to spatial analysis and spatial data visualization. The online book [Geocomputation with R]{<a href="https://geocompr.robinlovelace.net/" class="uri">https://geocompr.robinlovelace.net/</a>} is a good place to get more information and a deeper unerstanding on some of the functions used here.</p>
+</div>
+<p> </p>
+<div id="versions-notes" class="section level4 unnumbered">
+<h4>Version’s notes</h4>
 <p><strong>V1.0</strong></p>
 <ul>
 <li>One country based on a 90 km square with a 30 m resolution topogr4phy and land cover map.</li>
@@ -246,6 +257,24 @@ DRAFT
 <li>Practice stratified sampling design.</li>
 <li>Practice different plot and cluster-plot designs.</li>
 <li>Estimate additional indicators such as biodiversity.</li>
+</ul>
+<p> </p>
+</div>
+<div id="r-packages-list" class="section level2" number="0.1">
+<h2><span class="header-section-number">0.1</span> R packages list</h2>
+<p>Packages that we will actively use:</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>sf</code></li>
+</ul>
+<p>Packages used for developing the tutorial:</p>
+<ul>
+<li><code>knitr</code></li>
+<li><code>rmarkdown</code></li>
+<li><code>bookdown</code></li>
+<li><code>shiny</code></li>
+<li><code>learnr</code></li>
+<li><code>tmap</code></li>
 </ul>
 
 <div style="page-break-after: always;"></div>
